@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box {
+            width: 600px;
+            height: 260px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .box ul {
+            width: 600px;
+            height: 260px;
+            animation: move 1s linear infinite;
+            transform: rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+        }
+
+        @keyframes move {
+            from {
+                transform: rotateX(0);
+            }
+
+            to {
+                transform: rotateX(-360deg);
+            }
+        }
+
+        .box ul li {
+            width: 600px;
+            height:260px;
+            background: red;
+            position: absolute;
+            left:0;
+            top:0;
+
+        }
+
+        .box ul li:nth-child(1) {
+            background: red;
+            transform: rotateX(90deg) translateZ(130px);
+        }
+
+        .box ul li:nth-child(2) {
+            background: salmon;
+            transform: rotateX(180deg) translateZ(130px);
+        }
+
+        .box ul li:nth-child(3) {
+            background: sandybrown;
+            transform: rotateX(270deg) translateZ(130px);
+        }
+
+        .box ul li:nth-child(4) {
+            background: silver;
+            transform: rotateX(360deg) translateZ(130px);
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>1<img src="" alt=""></li>
+        <li>2<img src="" alt=""></li>
+        <li>3<img src="" alt=""></li>
+        <li>4<img src="" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>
